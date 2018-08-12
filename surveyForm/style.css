@@ -1,0 +1,55 @@
+body{
+    padding-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(201, 220, 236);
+    /* background-image: url(images/background.jpeg);
+    background-repeat: no-repeat;
+    background-size: 1500px;
+    margin: auto; */
+}
+
+#title{
+    text-align: center;
+    color: aliceblue;
+}
+
+#description{
+    padding-top: 30px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.container{
+    background-color: #dba085;
+    width: 700px;
+    margin:auto;
+    height: 700px;
+}
+
+.form-pair{
+    margin: 0;
+    padding: 0px;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.info{
+    /* padding-top: 10px; */
+    text-align: right;
+    /* padding: 10px; */
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+input{
+    height: 30px;
+    padding-left: 10px;
+    border-radius: 3px;
+}
+
+.input{
+    
+    text-align: left;
+    padding: 10px;
+}
