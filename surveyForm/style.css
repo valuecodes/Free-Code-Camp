@@ -43,13 +43,37 @@ body{
 }
 
 input{
-    height: 30px;
+    height: 10px;
+    padding-left: 10px;
+    border-radius: 3px;
+
+}
+
+
+
+.input{
+
     padding-left: 10px;
     border-radius: 3px;
 }
 
 .input{
-    
     text-align: left;
-    padding: 10px;
+    padding-left: 10px;
 }
+
+ul{
+    padding: 0px;
+    margin: 0px;
+}
+
+
+
+
+.input-field{
+    height: 30px;
+    margin: 5px;
+}
+
+
+
