@@ -1,16 +1,19 @@
 body{
-    padding-top: 30px;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(201, 220, 236);
-    /* background-image: url(images/background.jpeg);
+    background-color: #b6e0ce;
+    background-image: url(https://images.pexels.com/photos/533658/pexels-photo-533658.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
     background-repeat: no-repeat;
-    background-size: 1500px;
-    margin: auto; */
+    width: 100%;
+    background-position: center;
+    background-size: 2000px; 
+    margin-top:0px;
+    padding-top: 0px;
+    background-position-y: -100px;
 }
 
 #title{
     text-align: center;
-    color: aliceblue;
+    color: rgb(255, 255, 255);
 }
 
 #description{
@@ -20,14 +23,17 @@ body{
 }
 
 .container{
-    background-color: #dba085;
+    background: linear-gradient(180deg,rgb(142, 193, 218), #b6e0ce);
+    background-color: #e3bfb8;
     width: 700px;
     margin:auto;
     height: 700px;
+    margin-top: 200px;
+    border-radius: 20px;
 }
 
 .form-pair{
-    margin: 0;
+    margin: 10px;
     padding: 0px;
     list-style: none;
     display: grid;
@@ -38,8 +44,8 @@ body{
     /* padding-top: 10px; */
     text-align: right;
     /* padding: 10px; */
-    margin-top: auto;
     margin-bottom: auto;
+    margin-top: 10px;
 }
 
 input{
@@ -48,8 +54,6 @@ input{
     border-radius: 3px;
 
 }
-
-
 
 .input{
 
@@ -68,12 +72,29 @@ ul{
 }
 
 
-
-
 .input-field{
-    height: 30px;
+    height: 25px;
     margin: 5px;
 }
 
+.button{
+    background-color: rgb(142, 193, 218);
+    padding: 10px;
+    margin:auto;
+    display:block;
+    border-radius: 3px;
+    border: 0px;
+}
 
 
+@media screen and (max-width: 720px) {
+   .container{
+       width: 90%;
+   }
+   .input{
+    width: 90%;
+   }
+   .input-field{
+    width: 90%;
+   }
+  }

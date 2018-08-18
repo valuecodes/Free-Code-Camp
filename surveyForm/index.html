@@ -10,7 +10,7 @@
 <body>
     <h1 id="title">Survey Form</h1>
     <div class="container">
-        <p id="description">Please fill the form</p>
+        <p id="description">What kind of projects are planning to make on the future?</p>
         <form id="survey-form" method="GET" action="https://crossorigin.me/https://freecodecamp.com">
             <ul class="form-pair">
                 <li class="info"><label id="name-label" for="name">Name: </label></li>
@@ -28,7 +28,7 @@
             <ul class="form-pair">
                 <li class="info"><label id="number-label" for="number">Which option best describes your current role?</label></li>
                 <li class="input"><select id="dropdown" name="currentPos" class="dropdown input input-field">
-                    <option disabled value>Select an option</option>
+                    <option disabled selected value>Select an option</option>
                     <option value="student">Student</option>
                     <option value="job">Full Time Job</option>
                     <option value="learner">Full Time Learner</option>
@@ -37,7 +37,7 @@
                 </select></li>
             </ul>
             <ul class="form-pair">
-                <li class="info"><label for="userRating">* How likely is that you would recommend freeCodeCamp to a friend?</label></li>
+                <li class="info"><label for="userRating">* How likely are you going to attend a coding bootcamp on the future?</label></li>
                 <li class="input"> <ul style="list-style: none;">
                     <li class="radio"><label><input name="radio-buttons" value="1"  type="radio" class="userRatings" >Definitely</label></li>
                     <li class="radio"><label><input name="radio-buttons" value="2"  type="radio" class="userRatings" >Maybe</label></li>
@@ -45,15 +45,27 @@
                   </ul></li>
             </ul>
             <ul class="form-pair">
-                <li class="info"><label id="number-label" for="number">Which option best describes your current role?</label></li>
-                <li class="input"><select id="most-like" name="mostLike" class="dropdown input input-field">
-                    <option disabled selected value>Select an option</option>
-                    <option value="challenges">Challenges</option>
-                    <option value="projects">Projects</option>
-                    <option value="community">Community</option>
-                    <option value="openSource">Open Source</option>
-                </select></li>
+                <li class="info"><label id="number-label" for="number">Things that I am going to focus on the future</label></li>
+                <li class="input"><ul id="preferences" style="list-style: none;">
+                    <li class="checkbox"><label><input name="prefer" value="1" type="checkbox" class="userRatings">Front-end Projects</label></li>
+                    <li class="checkbox"><input name="prefer" value="2" type="checkbox" class="userRatings">Back-end Projects</li>
+                    <li class="checkbox"><label><input name="prefer" value="3" type="checkbox" class="userRatings">Data Visualization</label></li>
+                    <li class="checkbox"><label><input name="prefer" value="4" type="checkbox" class="userRatings">Challenges</label></li>
+                    <li class="checkbox"><label><input name="prefer" value="5" type="checkbox" class="userRatings">Open Source Community</label></li>
+                    <li class="checkbox"><label><input name="prefer" value="6" type="checkbox" class="userRatings">Gitter help rooms</label></li>
+                    <li class="checkbox"><label><input name="prefer" value="7" type="checkbox" class="userRatings">Videos</label></li>
+                    <li class="checkbox"><label><input name="prefer" value="8" type="checkbox" class="userRatings">City Meetups</label></li>
+                    <li class="checkbox"><label><input name="prefer" value="9" type="checkbox" class="userRatings">Wiki</label></li>
+                    <li class="checkbox"><label><input name="prefer" value="10" type="checkbox" class="userRatings">Forum</label></li>
+                    <li class="checkbox"><label><input name="prefer" value="10" type="checkbox" class="userRatings">Additional Courses</label></li>
+                  </ul>
+                </li>
             </ul>
+            <ul class="form-pair">
+                <li class="info"><label for="comments">Any Comments or Suggestions?</label></li>
+                <li class="input"><textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" placeholder="Enter your comment here..."></textarea></li>
+            </ul>
+            <button class="button" id="submit" type="submit">Submit</button>
         </form>
     </div>
 </body>
