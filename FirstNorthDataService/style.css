@@ -1,0 +1,247 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    color: black;
+    font-size: 20px;
+}
+
+.background{
+    background: linear-gradient(180deg,rgb(255, 255, 255), rgb(141, 141, 141));
+    /* background: linear-gradient(180deg,rgb(124, 124, 124), rgb(226, 226, 226)); */
+}
+
+/* Container */
+
+.container{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    
+}
+
+/* Header */
+
+#header{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 24% 1fr 39% 30%;
+    background-color: rgb(226, 226, 226);
+} 
+
+.logo{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.fas{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    /* padding-left: 10px; */
+}
+
+.logo h1{
+    margin: 0;
+}
+
+/* Nab Bar */
+#nav-bar{
+    display: grid;
+    /* margin: 20px; */
+    margin-left: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    list-style-type: none;
+    grid-gap: 10px;
+}
+#nav-bar li{
+    /* border: 1px solid; */
+    padding-top: 23px;
+    text-align: center;
+    background-color: rgb(124, 124, 124);
+    background: linear-gradient(180deg,rgb(124, 124, 124), rgb(226, 226, 226));
+    /* border: 1px solid; */
+    
+}
+
+#nav-bar li:hover{
+    background: linear-gradient(180deg, rgb(224, 186, 115), rgb(226, 226, 226));
+}
+
+#form{
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+}
+
+.nav-link{
+    text-decoration: none;
+    padding: 10px;
+}
+
+/* Form */
+#form{
+    height: 30px;
+}
+
+input{
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+}
+.btn{
+    background-color: rgb(175, 174, 174);
+}
+
+/* ShowCase */
+.showcase{
+    margin-top: 74px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#video{
+    /* width: 100%; */
+    margin: auto;
+}
+
+/* Features */
+.sectors{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+
+}
+
+.box{
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+.box:hover{
+    background-color: rgb(180, 228, 243);
+}
+
+h3{
+    text-align: center;
+    font-size: 30px;
+}
+
+/* How It works */
+
+.stepByStep{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr 1fr 2fr;
+    border: 3px solid;
+    border-radius: 30px;
+}
+
+.step{
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    padding: 10px;
+    padding-top: 30px;
+}
+
+.arrow{
+    color: rgb(39, 116, 90);
+}
+
+/* Pricing */
+.prices{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* height: 50px; */
+    grid-gap: 20px;
+}
+
+
+.price{
+    width: 100%;
+    display:grid;
+    margin: auto;
+    grid-template-rows:1fr 1fr 3fr 1fr; 
+    text-align: center;
+    border: 3px solid;
+    border-radius: 20px;
+    background-color: rgb(224, 186, 115);
+}
+
+button{
+    width: 100%;
+    background-color: rgb(189, 181, 108);
+    border: none;
+    height: 50px;
+}
+.sum{
+    border-top: 3px solid;
+    padding: 0;
+    margin: 0;
+
+}
+
+/* Footer */
+footer{
+    height: 50px;
+    text-align: center;
+    color: white;
+    background-color: rgb(63, 63, 63);
+    margin: 0;
+    padding: 0; 
+}
+ footer h3{
+     display: flex;
+ }
+footer h2{
+    
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+@media screen and (max-width: 770px) {
+    .sectors{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+    }
+    .stepByStep{
+        width: 90%;
+    }
+    .showcase{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    #video{
+        width: 100%;
+        margin: auto;
+        height: 100px;
+    }
+    #header{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-color: rgb(226, 226, 226);
+    } 
+    .prices{
+        width: 95%;
+    }
+   }
