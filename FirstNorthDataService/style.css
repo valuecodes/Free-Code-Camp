@@ -150,6 +150,7 @@ h3{
 }
 
 .step{
+    position: relative;
     margin-top: auto;
     margin-bottom: auto;
     text-align: center;
@@ -157,9 +158,6 @@ h3{
     padding-top: 30px;
 }
 
-.arrow{
-    color: rgb(39, 116, 90);
-}
 
 /* Pricing */
 .prices{
@@ -170,6 +168,7 @@ h3{
     grid-template-columns: 1fr 1fr 1fr;
     /* height: 50px; */
     grid-gap: 20px;
+    
 }
 
 
@@ -182,6 +181,10 @@ h3{
     border: 3px solid;
     border-radius: 20px;
     background-color: rgb(224, 186, 115);
+}
+
+.price:hover{
+    box-shadow: 0 20px 80px rgba(250, 3, 8, 0.19), 0 6px 6px rgba(221, 16, 16, 0.23);
 }
 
 button{
@@ -231,11 +234,13 @@ footer h2{
         grid-template-columns: 1fr 1fr 1fr;
     }
     #video{
+        padding-top: 90px;
         width: 100%;
         margin: auto;
         height: 100px;
     }
     #header{
+        height:150px;;
         width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -245,3 +250,74 @@ footer h2{
         width: 95%;
     }
    }
+
+   .arrow1{
+    left:-50px;
+   }
+
+   .arrow2{
+    left:-50px;
+   }
+
+
+   .arrow1{
+    animation-name: rainbow;
+    animation-duration: 4s;
+    position: relative;
+    animation-iteration-count:infinite;
+   }
+
+   @keyframes rainbow {
+    0% {
+    left:-50px; top:0px;
+      
+    }
+    50% {
+    left:50px; top:0px;
+    color: rgb(39, 116, 90);
+    }
+    100% {
+        left:-50px; top:0px;
+    }
+  }
+
+  .arrow2{
+    animation-name: rainbow2;
+    animation-duration: 4s;
+    position: relative;
+    animation-iteration-count:infinite;
+   }
+
+   @keyframes rainbow2 {
+    0% {
+    left:50px; top:0px;
+    }
+    50% {
+        color: rgb(39, 116, 90);
+        left:-100px; top:0px;
+    }
+    100% {
+        left:50px; top:0px;
+    }
+  }
+
+  .project{
+    animation-name: rainbow3;
+    animation-duration: 4s;
+    position: relative;
+    animation-iteration-count:infinite;
+   }
+
+   @keyframes rainbow3 {
+    0% {
+    left:20px; top:0px;
+    }
+    50% {
+        color: rgb(39, 116, 90);
+        left:-20px; top:0px;
+    }
+    100% {
+        left:20px; top:0px;
+    }
+  }
+  
