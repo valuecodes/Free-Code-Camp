@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Technical documentation Page</title>
+</head>
+<body>
+    <nav id="navbar">
+        <header>Darwin Information Typing Architecture</header>
+        <ul>
+            <a class="nav-link" href="#Introduction" rel="internal"><li>Introduction</li></a>
+            <a class="nav-link" href="#content_reuse" rel="internal"><li>Content reuse</li></a>
+            <a class="nav-link" href="#information_typing" rel="internal"><li>Information typing</li></a>
+            <a class="nav-link" href="#maps" rel="internal"><li>Maps</li></a>
+            <a class="nav-link" href="#metadata" rel="internal"><li>Metadata</li></a>
+            <a class="nav-link" href="#specialization" rel="internal"><li>Specialization</li></a>
+            <a class="nav-link" href="#topic_orientation" rel="internal"><li>Topic orientation</li></a>
+            <a class="nav-link" href="#creating_content_in_DITA" rel="internal"><li>Creating content in DITA</li></a>
+            <a class="nav-link" href="#hello_world" rel="internal"><li>Hello World</li></a>
+            <a class="nav-link" href="#file_sample" rel="internal"><li>File sample</li></a>
+            <a class="nav-link" href="#ditamap_file" rel="internal"><li>Ditamap file</li></a>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <article>
+                <p>
+                        The Darwin Information Typing Architecture or Document Information Typing Architecture (DITA) is an XML data model for authoring and publishing. It is an open standard[1] that is defined and maintained by the OASIS DITA Technical Committee.[2]
+
+                        The name derives from the following components:
+                </p>
+                <li>Darwin: it uses the principles of specialization and inheritance, which is in some ways analogous to the naturalist Charles Darwin's concept of evolutionary adaptation,</li>
+                <li>Information typing, which means each topic has a defined primary objective (procedure, glossary entry, troubleshooting information) and structure,</li>
+                <li>Architecture: DITA is an extensible set of structures.</li>
+            </article>
+        </section>
+        <section class="main-section" id="content_reuse">
+            <header>Content reuse</header>
+            <article>
+                <p>Topics can be reused across multiple publications. Fragments of content within topics can be reused through the use of content references (conref or conkeyref), a transclusion mechanism.</p>
+            </article>
+        </section>
+        <section class="main-section" id="information_typing">
+            <header>Information typing</header>
+            <article>
+                <p>The latest version of DITA (DITA 1.3) includes five specialized topic types: Task, Concept, Reference, Glossary Entry, and Troubleshooting. Each of these five topic types is a specialization of a generic Topic type, which contains a title element, a prolog element for metadata, and a body element. The body element contains paragraph, table, and list elements, similar to HTML.</p>
+                <li>A Task topic is intended for a procedure that describes how to accomplish a task. It lists a series of steps that users follow to produce an intended outcome. The steps are contained in a taskbody element, which is a specialization of the generic body element. The steps element is a specialization of an ordered list element.</li>
+                <li>Concept information is more objective, containing definitions, rules, and guidelines.</li>
+                <li>A Reference topic is for topics that describe command syntax, programming instructions, and other reference material, and usually contains detailed, factual material.</li>
+                <li>A Glossary Entry topic is used for defining a single sense of a given term. In addition to identifying the term and providing a definition, this topic type might also have basic terminology information, along with any acronyms or acronym expansions that may apply to term.</li>
+                <li>The Troubleshooting topic describes a condition that the reader may want to correct, followed by one or more descriptions of its cause and suggested remedies.</li>
+            </article>
+        </section>
+        <section class="main-section" id="maps">
+            <header>Maps</header>
+            <article>
+                <img src="" alt="">
+                <h1></h1>
+                <h2></h2>
+                <p>A DITA map is a container for topics used to transform a collection of content into a publication. It gives the topics' sequence and structure. A map can include relationship tables (reltables) that define hyperlinks between topics.[5] Maps can be nested. Maps can reference topics or other maps, and can contain a variety of content types and metadata.</p>
+            </article>
+        </section>
+        <section class="main-section" id="metadata">
+            <header>Metadata</header>
+            <article>
+                <p>DITA includes extensive metadata elements and attributes, both at topic level and within elements.[6] Conditional text allows filtering or styling content based on attributes for audience, platform, product, and other properties. The conditional processing profile (.ditaval file) is used to identify which values are to be used for conditional processing.</p>
+            </article>
+        </section>
+        <section class="main-section" id="specialization">
+            <header>Specialization</header>
+            <article>
+                <p>DITA allows adding new elements and attributes thorough specialization of base DITA elements and attributes. Through specialization, DITA can accommodate new topic types, element types, and attributes as needed for specific industries or companies. Specializations of DITA for specific industries, such as the semiconductor industry, are standardized through OASIS technical committees or subcommittees. Many organizations using DITA also develop their own specializations.</p>
+                <p>The extensibility of DITA permits organizations to specialize DITA by defining specific information structures and still use standard tools to work with them. The ability to define company-specific information architectures enables companies to use DITA to enrich content with metadata that is meaningful to them, and to enforce company-specific rules on document structure.</p> 
+            </article>
+        </section>
+        <section class="main-section" id="topic_orientation">
+            <header>Topic orientation</header>
+            <article>
+                <p>DITA content is created as topics, each an individual XML file. Typically, each topic covers a specific subject with a singular intent, for example, a conceptual topic that provides an overview, or a procedural topic that explains how to accomplish a task.[8] Content should be structured to resemble the file structure in which it is contained.</p>
+            </article>
+        </section>
+        <section class="main-section" id="creating_content_in_DITA">
+            <header>Creating content in DITA</header>
+            <article>
+                
+            </article>
+        </section>
+        <section class="main-section" id="ditamap_file">
+            <header>Ditamap file</header>
+            <article>
+                    <p>
+                        <code>
+                            <?xml version="1.0" encoding="utf-8"?>
+                            <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+                            <topic xml:lang="en" id="sample">
+                              <title>Sample</title>
+                              <body>
+                              <p audience="foo">Hello World!</p>
+                              </body>
+                            </topic>
+                        </code>  
+                    </p>
+            </article>
+        </section>
+        <section class="main-section" id="hello_world">
+            <header>Hello World</header>
+            <article>
+                <p>
+                    <code>
+                        <?xml version="1.0" encoding="utf-8"?>
+                        <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+                        <topic xml:lang="en" id="sample">
+                        <title>Sample</title>
+                        <body>
+                            <p audience="foo">Hello World!</p>
+                        </body>
+                        </topic>
+                    </code>  
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="file_sample">
+            <header>File Sample</header>
+            <article>
+                <p>.ditaval file sample (for conditionalizing text)</p>
+                <p>
+                    <code>
+                        <?xml version="1.0" encoding="UTF-8"?>
+                        <val>
+                        <prop att="audience" val="novice" action="include" />
+                        <prop att="audience" val="expert" action="exclude" />
+                        </val>
+                    </code>
+                    
+                </p>
+                <p>
+                    Example of conditionalized text:
+                </p>
+                <p>
+                    <code>
+                        <p>
+                        This is information useful for all audiences.
+                        </p>
+                    </code>
+                    <code>
+                        <p audience="novice">    
+                            This is information useful for a novice audience.
+                        </p>
+                        <p audience="expert">
+                            This is information useful for an expert audience. 
+                        </p>
+                    </code>
+                </p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
