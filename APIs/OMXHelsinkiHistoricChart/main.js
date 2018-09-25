@@ -3,7 +3,7 @@ req.open("GET",'https://raw.githubusercontent.com/valuecodes/Free-Code-Camp/mast
 req.send();
 req.onload=function(){
     json=JSON.parse(req.responseText);
-    console.log(json.length);
+    console.log(json[0][0]);
     
     
   document.getElementsByClassName('visHolder')[0].innerHTML=JSON.stringify(json);
