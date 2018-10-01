@@ -55,27 +55,23 @@ console.log(data)
     x.domain(d3.extent(data,function(d){return d.date}));
     y.domain(d3.extent(data,function(d){return d.value}));
 
-    d3.select('svg').selectAll('rect')
-    .data(data)
-    .enter()
-    .append('rect')
-    .attr("x", (d, i) => i * 2)
-    .attr("y", (d, i) => height-d.value/50)
-    .attr("width", 2)
-    .attr("height", (d, i) => d.value/50);
-    // .attr('data-date', function(d, i) {
-    //   return data[i].date
-    // })
-    // .attr('data-gdp', function(d, i) {
-    //   return data[i].value
-    // })    
-
-    // .data(data-gdp)
+    // d3.select('svg').selectAll('rect')
+    // .data(data)
     // .enter()
-    // .append("rect")
-    // .attr("x", (d, i) => i * 30)
-    // .attr("width", 25)
-    // .attr("height", (d, i) => 3 * d);
+    // .append('rect')
+    // .attr("x", (d, i) => i * 2+margin.right)
+    // .attr("y", (d, i) => height-d.value/50)
+    // .attr("width", 2)
+    // .attr("height", (d, i) => d.value/50);
+
+    g.selectAll(".bar")
+    .data(data)
+    .enter().append("rect")
+      .attr("class", "bar")
+      // .attr("x", function(d) { return x(d.letter); })
+      // .attr("y", function(d) { return y(d.frequency); })
+      // .attr("width", x.bandwidth())
+      // .attr("height", function(d) { return height - y(d.frequency); });
 
     g.append("g")
     .attr("transform", "translate(0," + height + ")")
@@ -97,7 +93,7 @@ console.log(data)
 
 g.append("path")
   .datum(data)
-  .attr("fill", "none")
+  .attr("fill", "steelblue")
   .attr("stroke", "steelblue")
   .attr("stroke-linejoin", "round")
   .attr("stroke-linecap", "round")
