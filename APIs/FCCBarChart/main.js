@@ -22,7 +22,7 @@ let api="https://raw.githubusercontent.com/FreeCodeCamp/ProjectReferenceData/mas
     for (var i in data.data) {
       // console.log(data.data[i][0]);
         arr.push({
-            date: new Date(data.data[i][0]), //date
+            date: new Date(data.data[i][0]).getFullYear(), //date
             value:data.data[i][1] //convert string to number
         });
     }
@@ -35,40 +35,80 @@ let createChart=data=>{
     let year=[];
     
     for(var i=0;i<data.length;i++){
-        dataset.push(data[i].value);
+        dataset.push([data[i].value,data[i].date]);
     }
+
+  
+
     const w=500;
     const h=500;
-    const padding=60;
+    const padding=30;
+
+    console.log(d3.max(dataset,(d,i)=>d[1]));
 
     const xScale=d3.scaleLinear()
-        .domain([0,dataset.length])
-        .range([padding,w-padding]);
+        .domain([1947,2017])
+        .range([0+padding,w-padding]);
     
     const yScale=d3.scaleLinear()
-        .domain([0,d3.max(dataset,(d)=>d)])
-        .range([h-padding, padding]);
+        .domain([0,d3.max(dataset,(d,i)=>d[0])])
+        .range([h-padding, 0]);
 
     var svg =d3.select('body')
         .append('svg')
+        .attr('class', 'overlay')
         .attr('width',w)
         .attr('height',h);
+
+    var bart = d3.select('.bar')
+    .style('opacity', 0,9)
+    .style("fill", "black")
+    .attr("width", 10)
     
     svg.selectAll("rect")
         .data(dataset)
         .enter()
         .append("rect")
-        .attr("x", (d,i) => xScale(i))
-        .attr('y',(d,i) =>yScale(d)) 
+        .attr("x", (d,i) => xScale(d[1]))
+        .attr('y',(d,i) =>yScale(d[0])) 
+        .attr('class', 'bar')
         .attr("width", 3)
-        .attr("height", (d, i) =>h- yScale(d))
-        .attr("fill", "#f1f2f8");
+        .attr("height", (d, i) =>h- yScale(d[0])-padding)
+        .attr("fill", "lightgray")
+        .style('fill', '#33adff')
+        .on('mouseover', function(d,i) {
+            bart.transition()
+            .style('opacity', 0,9)
+            .style("fill", "black")
+            .attr("width", 100)
+            .attr("x", (d,i) => 100)
+            .attr("height", (d, i) =>h- yScale(d[0])-100)
+            console.log(d);
+            // changeColor(d);
+            // d3.selectAll('.bar')
+            
 
+            
+            // .style('height', 10 + 'px')
+            // .style('width', 2 + 'px')
+            // .style('opacity', .9)
+            // .style('left', ( 10) + 0 + 'px')
+            // .style('top', 100 + 'px')
+            // .style('transform', 'translateX(600px)');
+        })
+        // .attr("width", 10);
+function changeColor(bar){
+    d3.select('rect').style("fill", "red");
+}
+        
     const xAxis=d3.axisBottom(xScale);
 
     svg.append('g')
-        .attr('transform','translate(0,'+(h-padding+30)+')')
+        .data(dataset)
+
+        .attr('transform','translate(0,'+(h-padding)+')')
+        // .append('text')
+        // .attr("fill", "black")
         .call(xAxis)
-        .attr("fill", "white")
-        .attr('style','white')
+
 };
